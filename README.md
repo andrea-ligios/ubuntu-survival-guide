@@ -2,11 +2,14 @@
 
 > A humble Cheat Sheet to save the poor noob's day
 
-1. Download the `.html` file and the `/assets` folder
-2. Open the file with a decent browser, it should look like follows:
+## Instructions
 
-   ![Ubuntu-Survival-Guide.png](assets/Ubuntu-Survival-Guide.png)
+1. Download the `/assets` folder
+2. Open the `.html` file with a decent browser, it should look like follows:
 
-3. Print Preview, remove all margins, remove all infos, then print
-4. Take always with you on your Ubuntu journeys
-5. Enjoy
+   ![Ubuntu-Survival-Guide.png](Ubuntu-Survival-Guide.png)
+
+3. Print Preview -> remove all margins, remove all infos, then Print
+4. Set Printer to print background images and colors
+5. Take always with you on your Ubuntu journeys
+6. Enjoy
