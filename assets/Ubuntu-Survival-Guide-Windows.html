@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Ubuntu Survival Cheat Sheet</title>
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed|Ubuntu+Mono:700" rel="stylesheet">
+		<style type="text/css">
+			@page,body {
+				size: 21cm 29.7cm;
+				margin: 0;
+			}
+			*{
+			   font-family: 'Ubuntu Condensed', sans-serif;
+			   box-sizing: border-box;
+			}
+			h1,h2,h3,h4,h5,h6{
+				font-family: 'Ubuntu', sans-serif;
+				margin: 0;
+			}
+			code{
+				font-family: 'Ubuntu Mono', monospace;
+			}
+			p, #bottom {
+				font-size: 0.8em;
+			}
+			#main{			
+				left: 5mm;
+				width: 27.7cm;
+				height: 19cm;
+				position: absolute;
+				overflow: none;
+			}
+			section{
+				padding: 5mm;
+				position: absolute;
+			}
+			#top{
+				width: 27.7cm;
+				height: 2.5cm;
+				padding-top: 2.5mm;
+				padding-bottom: 0;
+				background: black;
+				color: white;
+			}
+			#left{
+				top: 2.5cm;
+				left:0;
+				height: 16cm;
+				width: 9.23cm;
+			}
+			#middle{
+				top: 2.5cm;
+				left: 9.23cm;
+				height: 16cm;
+				width: 9.23cm;
+			}
+			#right{
+				top: 2.5cm;
+				left: 18.46cm;
+				height: 16cm;
+				width: 9.23cm;
+			}
+			#bottom{
+				left: 0;
+				top: 18.7cm;
+				bottom: 0;
+				height: 1cm;
+				line-height: 1cm;
+				width: 27.7cm;
+				background: lavender;
+				padding: 0;
+				text-align: center;
+				vertical-align: center;
+			}
+			div {
+				display: inline-block;
+				vertical-align: top;
+			}
+			#logo {
+				width: 2cm;
+				height: 2cm;
+				background-image: url('cof_orange_hex.svg');
+				background-position: center center;
+				background-size: 3cm;
+				background-repeat: no-repeat;
+				overflow: visible;
+				margin-left: 0.5cm;
+				margin-right: 0.5cm;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<section id="top">
+				<div style="width: 50%; overflow: visible;">
+					<div id="logo"> </div>
+					<div>
+					<h1>Ubuntu</h1>
+					<h3 style="color: gold;">A Survival Guide</h3>
+					<span style="color: silver" >squeezed into a cheat sheet</span>
+					</div>
+				</div><div style="width: 50%;">
+					<h4 style="color: crimson;">ðŸ’ª Super Powers</h4>
+					<div style="width: 100%;">
+					<div  style="width: 35%;">
+					<p>
+						Run a command as Super User<br>
+						<code>sudo COMMAND</code>
+					</p>
+					</div><div  style="width: 25%;" >
+					<p>
+						Elevate to <em>root</em><br>
+						<code>sudo -i</code>
+					</p>
+					</div><div  style="width: 40%;">
+					<p>
+						Turn a user into a Super User<br>
+						<code>sudo usermod -aG sudo USER</code>
+					</p>
+					</div>
+
+					</div>
+				</div>
+			</section>
+			<section id="left">
+				<h4 style="color: dodgerBlue;">ðŸ”§ System Maintenance</h4>
+				<p>
+					Show Kernel version (<code>-a</code> for all)<br>
+					<code>uname -r</code>
+				</p>
+				<p>
+					Show Ubuntu version (<code>-a</code> for all)<br>
+					<code>lsb_release -r</code>
+				</p>
+				<p>
+					Keep the system up-to-date<br>
+					<code>sudo apt update && sudo apt dist-upgrade</code>
+				</p>
+				<p>
+					Keep the system clean (by deleting useless files)<br>
+					<code>sudo apt autoremove && sudo apt autoclean</code>
+				</p>
+				<p>
+					Upgrade to a newer release (system must be up-to-date first)<br>
+					<code>sudo do-release-upgrade -d</code>
+				</p>
+				<p>
+					List all running processes<br>
+					<code>ps aux</code>
+				</p>
+				<p>
+					Kill a process<br>
+					<code>kill -9 PROCESS_ID</code>
+				</p>
+				<p>s
+					See which programs are listening on which ports<br>
+					<code>netstat -peanut</code>
+				</p>
+				<p>
+					See who is listening on a specific port<br>
+					<code>lsof -i :PORT</code>
+				</p>
+				<p>
+					Run a command as a service (console won't hang)<br>
+					<code>COMMAND &</code>
+				</p>
+				<p>
+					Find a previous command in the <em>History</em><br>
+					<code>history | grep COMMAND</code>
+				</p>
+				<p>
+					Run a previous command found in the <em>History</em><br>
+					<code>!COMMAND_ID</code>
+				</p>
+				<p>
+					Check out System Logs (other logs are in the same folder)<br>
+					<code>cat /var/log/syslog</code> (or <code>less</code> or <code>tail</code> or <code>nano</code> or...)
+				</p>
+		    </section>
+			<section id="middle">
+				<h4 style="color: forestGreen;">Files and Folders</h4>
+				<p>
+					List files with details<br>
+					<code>ls -l</code>
+				</p>
+				<p>
+					List all files including hidden files<br>
+					<code>ls -la</code>
+				</p>
+				<p>
+					List files ordered by last modified<br>
+					<code>ls -lt</code>
+				</p>
+				<p>
+					Clone a directory (recursive, same timestamps and permissions)<br>
+					<code>cp -a FOLDER TARGET</code>
+				</p>
+				<p>
+					Find a file from current directory<br>
+					<code>sudo find . -name 'FILE'</code>
+				</p>
+				<p>
+					Read the last 1000 rows of a file and listen for modifications<br>
+					<code>tail -1000f FILE</code>
+				</p>
+				<p>
+					Read a file interactively (h for help)<br>
+					<code>less FILE</code>
+				</p>
+				<p>
+					Get the size of a directory<br>
+					<code>du -sh FOLDER</code>
+				</p>
+				<p>
+					Check partitions status (is your disk full?)<br>
+					<code>df -h</code>
+				</p>
+				<p>
+					Relax permissions on a file or a folder:<br>
+					<code>chmod 777 TARGET</code>
+				</p>
+				<p>
+					Set ownership (user/group) of a file or a folder<br>
+					<code>chown USER:GROUP TARGET</code>
+				</p>
+				<p>
+					Open a file in a privileged terminal editor<br>
+					<code>sudo nano FILE</code>
+				</p>
+				<p>
+					Find occurrences of a text in a file or in many files<br>
+					<code>grep TEXT TARGET</code>
+				</p>
+			</section>
+			<section id="right">
+				<h4 style="color: orange;">Users and Groups</h4>
+				<p>
+					List all groups<br>
+					<code>groups</code>
+				</p>
+				<p>
+					List groups a user is a member of<br>
+					<code>groups USER</code>
+				</p>
+				<p>
+					List users which are members of a group<br>
+					<code>getent group GROUP</code>
+				</p>
+				<p>
+					Create a new user<br>
+					<code>sudo adduser USER</code>
+				</p>
+				<p>
+					Add an existing user to a group<br>
+					<code>sudo usermod -aG GROUP USER</code>
+				</p>
+				<p>
+					Change a user's password<br>
+					<code>passwd USER</code>
+				</p>
+				<p>
+					Impersonate a user (or return to your user from root)<br>
+					<code>su USER</code>
+				</p>
+				<p>
+					Move to user home (AKA <code>~</code>, AKA <code>/home/USER</code>)<br>
+					<code>cd</code>
+				</p>
+				<p>
+					Delete a user<br>
+					<code>sudo userdel USER</code>
+				</p>
+
+				<h4 style="color: coral;">Graphical User Interface</h4>
+				<p>
+					Open a Terminal<br>
+					<code>CTRL + ALT + T</code>
+				</p>
+				<p>
+					Open a privileged file explorer (for current folder use <code>.</code>)<br>
+					<code>sudo nautilus PATH</code>
+				</p>
+				<p>
+					Open a file in a privileged GUI text editor<br>
+					<code>sudo gedit FILE</code>
+				</p>
+			</section>
+			<section id="bottom">
+				<div style="width:33%; text-align: left;">
+					Made with â¤ï¸ by Andrea Ligios
+				</div><div style="width:33%;">
+					ðŸ—½ MIT License
+				</div><div style="width:33%; text-align: right;">
+					â­ï¸ https://github.com/andrea-ligios/ubuntu-survival-guide
+				</div>
+			</section>
+		</div>
+	</body>
+</html>
