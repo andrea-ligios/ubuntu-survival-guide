@@ -2,6 +2,8 @@
 
 > A humble Cheat Sheet to save the poor noob's day
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 ## Instructions
 
 1. Download the `/assets` folder, then open the `.html` file with a decent browser; it should look like follows:
