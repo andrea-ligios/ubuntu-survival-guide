@@ -8,6 +8,6 @@
 
    ![Ubuntu-Survival-Guide.png](Sample.png)
 
-2. Print Preview, set **landscape** orientation, remove all **margins**, remove all **infos**, click Print, allow the printer to **print background images and colors**, then finally click the Print button for good
+2. Print Preview, set **landscape** orientation, use **margins of 10mm**, remove all **infos**, allow the printer to **print background images and colors**, then finally click the Print button for good
 3. Take always with you on your Ubuntu journeys
 4. Enjoy
