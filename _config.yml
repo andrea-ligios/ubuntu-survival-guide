@@ -1,3 +1,2 @@
 theme: jekyll-theme-slate
-site.github.zip_url: "https://github.com/andrea-ligios/ubuntu-survival-guide/zipball/gh-pages"
-site.github.tar_url: "https://github.com/andrea-ligios/ubuntu-survival-guide/tarball/gh-pages"
+show_downloads: true
